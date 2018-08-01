@@ -20,7 +20,47 @@ config/database.yml
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
+*.rbc
+*.sassc
+*.swp
+.sass-cache
+capybara-*.html
+.rvmrc
 
+# Ignore Byebug command history file.
 .byebug_history
+
+# Ignore some public folder like assets, upload file..
+/public/system/*
+/public/assets/*
+/public/content/*
+/public/uploads/*
+
+# ignore database config it will base on owner development
+config/database.yml
+
+# ignore database config it will base on each environment
+config/secrets.yml
+
+# ignore setting local file
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# for mac
+.DS_Store
+
+# i18n-js
+app/assets/javascripts/i18n/translations.js
+
+# Framgia CI
+.framgia-ci-reports
+
+# Corporation mockup
+/public/mockup
+
+# ide settings files
+.idea/
+
+# dump file
+dump.rdb
