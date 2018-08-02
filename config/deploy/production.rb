@@ -2,7 +2,7 @@ set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/deploy/apps/ecoinomic"
 set :branch, :config_deploy
-server "172.31.30.5", user: "linhnguyen1411", roles: %w(web app db)
+server "54.200.93.64", user: "linhnguyen1411", roles: %w(web app db)
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
