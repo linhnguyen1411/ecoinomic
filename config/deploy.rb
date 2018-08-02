@@ -1,4 +1,4 @@
-lock '3.4.0'
+lock '3.11.0'
 
 set :application, 'ecoinomic'
 set :repo_url, 'git@github.com:linhnguyen1411/ecoinomic.git' # Edit this to match your repository
