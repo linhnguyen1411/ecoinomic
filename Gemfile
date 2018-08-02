@@ -16,13 +16,12 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "devise"
 
-group :production do
-  gem "capistrano"
-  gem "capistrano3-puma"
-  gem "capistrano-rails", require: false
-  gem "capistrano-bundler", require: false
-  gem "capistrano-rvm"
-end
+gem "capistrano"
+gem "capistrano-bundler"
+gem "capistrano-rails"
+gem "capistrano-resque", require: false
+gem "capistrano-rvm"
+gem "capistrano3-puma"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

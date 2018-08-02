@@ -1,7 +1,7 @@
 set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/deploy/apps/ecoinomic"
-set :branch, :config_deploy
+set :branch, :master
 server "54.200.93.64", user: "linhnguyen1411", roles: %w(web app db)
 # server-based syntax
 # ======================
