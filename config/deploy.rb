@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "neet-team"
+set :application, "ecoinomic"
 set :repo_url, "git@github.com:linhnguyen1411/ecoinomic.git"
 
 set :pty, true
