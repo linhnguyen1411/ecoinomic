@@ -1,16 +1,15 @@
-# config valid for current version and patch releases of Capistrano
-lock "~> 3.11.0"
+lock '3.4.0'
 
-set :application, "ecoinomic"
-set :repo_url, "git@github.com:linhnguyen1411/ecoinomic.git"
-
-set :deploy_to, '/home/deploy/apps/ecoinomic'
+set :application, 'ecoinomic'
+set :repo_url, 'git@github.com:linhnguyen1411/ecoinomic.git' # Edit this to match your repository
+set :branch, :master
+set :deploy_to, '/deploy/apps/ecoinomic'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user
-set :rvm_ruby_version, 'jruby-1.7.19' # Edit this if you are using MRI Ruby
+set :rvm_ruby_version, 'ruby-2.5.1' # Edit this if you are using MRI Ruby
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
