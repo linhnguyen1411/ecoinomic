@@ -29,8 +29,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = { :host => 'http://34.221.228.228' }
-
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   #These settings are for the sending out email for active admin and consequently the   devise mailer
   ActionMailer::Base.delivery_method = :smtp
@@ -46,7 +45,6 @@ Rails.application.configure do
     :user_name          => 'neet.team.2018@gmail.com',
     :password           => 'neetteam123'
   }
-
 
   config.action_mailer.perform_caching = false
 
