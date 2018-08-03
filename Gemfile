@@ -16,7 +16,7 @@ gem "jbuilder", "~> 2.5"
 gem "devise"
 gem "jquery-rails"
 gem 'figaro'
-gem 'puma'
+gem "puma", "~> 3.0"
 gem "capistrano"
 gem "capistrano-bundler"
 gem "capistrano-rails"
