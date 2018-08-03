@@ -4,7 +4,7 @@
     <title>Ecoinomic</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'user_manager', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'user_manager', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'user_manager', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
@@ -15,7 +15,12 @@
             <a class="blog-header-logo" href="#">Ecoinomic</a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
-            <a class="btn btn-sm btn-outline-secondary" href="#">Log out</a>
+            <% if current_user %>
+              <%= link_to "Log out", destroy_user_session_path, class: "btn btn-sm btn-outline-secondary", method: :delete,
+                data: {confirm: "Are you sure?"} %>
+            <% else %>
+              <%= link_to "Log in", new_user_session_path, class: "btn btn-sm btn-primary" %>
+            <% end %>
           </div>
         </div>
       </header>
