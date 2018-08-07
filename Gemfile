@@ -22,8 +22,15 @@ gem "capistrano-bundler"
 gem "capistrano-rails"
 gem "capistrano-resque", require: false
 gem "capistrano-rvm"
+gem 'swiper-rails'
 gem "capistrano3-puma"
+gem "font-awesome-rails"
+gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
+gem 'flag-icons-rails'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-particles.js'
+end
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
