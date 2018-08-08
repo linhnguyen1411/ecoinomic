@@ -27,7 +27,7 @@ gem "capistrano3-puma"
 gem "font-awesome-rails"
 gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 gem 'flag-icons-rails'
-gem "icheck-rails"
+gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-particles.js'
