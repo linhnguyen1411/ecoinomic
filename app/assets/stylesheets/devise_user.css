@@ -15,5 +15,6 @@
  *= require devise_user/cryptocoins/cryptocoins.css
  *= require devise_user/css/pages/account-login.css
  *= require devise_user/cryptocoins/cryptocoins.css
+ *= require icheck/square/blue
+ *= require icheck/square/green
  */
-@import 'icheck/square/_all'
