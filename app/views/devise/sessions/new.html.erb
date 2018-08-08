@@ -1,26 +1,56 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="content-body">
+      <section id="account-login" class="flexbox-container">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <!-- image -->
+          <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-12 p-0 text-center d-none d-md-block">
+            <div class="border-grey border-lighten-3 m-0 box-shadow-0 card-account-left height-400">
+              <%= image_tag "user/pages/account-login.png", class: "card-account-img width-200" %>
+            </div>
+          </div>
+          <!-- login form -->
+          <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-12 p-0">
+            <div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right height-400">
+              <div class="card-content">
+                <div class="card-body p-3">
+                  <p class="text-center h5 text-capitalize">Welcome to Crypto ICO!</p>
+                  <p class="mb-3 text-center">Please enter your login details</p>
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name),
+                    html: {class: "form-horizontal form-signin"}) do |f| %>
+                    <fieldset class="form-label-group">
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email",
+                        placeholder: "Your Username", class: "form-control" %>
+                      <%= f.label :email %>
+                    </fieldset>
+                    <fieldset class="form-label-group">
+                      <%= f.password_field :password, autofocus: true, class: "form-control",
+                        placeholder: "Enter password" %>
+                      <%= f.label :password %>
+                    </fieldset>
+                    <div class="form-group row">
+                      <div class="col-md-6 col-12 text-center text-sm-left">
+                        <fieldset>
+                          <% if devise_mapping.rememberable? -%>
+                            <%= f.check_box :remember_me, class: "chk-remember" %>
+                            <%= f.label :remember_me %>
+                          <% end -%>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="#" class="card-link">Forgot Password?</a></div>
+                    </div>
+                    <%= f.submit "Log in", class: "btn-gradient-primary btn-block my-1" %>
+                    <p class="text-center"><%= link_to "Sign up", new_registration_path(resource_name), class: "card-link" %></p>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
-<% end %>
-
+</div>
 <%= render "devise/shared/links" %>
