@@ -38,6 +38,7 @@ install_plugin Capistrano::SCM::Git
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 require 'capistrano/bundler'
 require 'capistrano/rvm'
+require "capistrano/rails/assets"
 require 'capistrano/rails/migrations' # for running migrations
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
