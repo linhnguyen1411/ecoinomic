@@ -7,7 +7,7 @@ end
 
 
 gem "rails", "~> 5.1.6"
-# gem "mysql2"
+gem "mysql2"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
@@ -45,7 +45,4 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
-group :production do
-  gem "pg"
-end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

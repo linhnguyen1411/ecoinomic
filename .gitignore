@@ -35,9 +35,6 @@ capybara-*.html
 
 # ignore database config it will base on owner development
 
-# ignore database config it will base on each environment
-config/secrets.yml
-
 # ignore setting local file
 config/settings.local.yml
 config/settings/*.local.yml
