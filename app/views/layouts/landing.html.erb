@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecoinomic</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'landing', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <div id="particles-js"></div>
+    <%= javascript_include_tag 'landing', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="1-column undefined page-animated svg-wrapper loaded" data-menu-open="hover" data-menu="">
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+source "https://rubygems.org"
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
+
+gem "rails", "~> 5.1.6"
+# gem "mysql2"
+gem "sass-rails", "~> 5.0"
+gem "uglifier", ">= 1.3.0"
+gem "coffee-rails", "~> 4.2"
+gem "turbolinks", "~> 5"
+gem "jbuilder", "~> 2.5"
+gem "devise"
+gem "jquery-rails"
+gem 'figaro'
+gem "puma", "~> 3.0"
+gem "capistrano"
+gem "capistrano-bundler"
+gem "capistrano-rails"
+gem "capistrano-resque", require: false
+gem "capistrano-rvm"
+gem 'swiper-rails'
+gem "capistrano3-puma"
+gem "font-awesome-rails"
+gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
+gem 'flag-icons-rails'
+gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-particles.js'
+end
+group :development, :test do
+  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "capybara", "~> 2.13"
+  gem "selenium-webdriver"
+end
+
+group :development do
+  gem "web-console", ">= 3.3.0"
+  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "spring"
+  gem "spring-watcher-listen", "~> 2.0.0"
+end
+
+group :production do
+  gem "pg"
+end
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
