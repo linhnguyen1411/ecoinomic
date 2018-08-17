@@ -90,7 +90,7 @@
               data: {animation: "fadeInDown", animation_delay: "1.8s", target: "_blank"}%>
             <% end %>
             <% if current_user %>
-              <%= link_to "Welcome: #{current_user.name}", user_path(current_user), class: "btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated",
+              <%= link_to "Profile", user_path(current_user), class: "btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated",
               data: {animation: "fadeInDown", animation_delay: "1.8s", target: "_blank"}%>
             <% end %>
           </form>

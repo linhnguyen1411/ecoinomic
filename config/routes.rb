@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end
   scope module: 'user' do
     resources :users
+    get "/faq", to: "faqs#index"
   end
 end
