@@ -28,14 +28,20 @@ gem "font-awesome-rails"
 gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 gem 'flag-icons-rails'
 gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
+gem 'perfect-scrollbar-rails', '~> 0.6.10'
+gem "carrierwave", "~> 1.0"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-particles.js'
 end
 group :development, :test do
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
   gem "selenium-webdriver"
+  gem "better_errors"
+  gem "byebug", platform: :mri
+  gem "pry-byebug"
+  gem "pry-rails"
+  gem "rails-controller-testing"
 end
 
 group :development do

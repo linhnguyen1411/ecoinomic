@@ -17,7 +17,6 @@
       <circle cx="256" cy="256" r="75" fill="none" stroke="url(#loaderLinearColors)" />
     </g>
     <circle cx="256" cy="256" r="60" fill="url(#loaderImage)" stroke="none" stroke-width="0" />
-    <!-- Change the preloader logo here -->
     <defs>
       <pattern id="loaderImage" height="100%" width="100%" patternContentUnits="objectBoundingBox">
         <%= image_tag "landing/loader-logo.png", preserveAspectRatio: "none", width: "1", height: "1" %>
@@ -27,7 +26,6 @@
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
 </div>
-<!--/ Preloader -->
 <nav class="vertical-social">
   <ul>
     <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
@@ -36,10 +34,7 @@
     <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
   </ul>
 </nav>
-<!-- /////////////////////////////////// HEADER /////////////////////////////////////-->
-<!-- Header Start-->
 <header class="page-header">
-  <!-- Horizontal Menu Start-->
   <nav class="main-menu static-top navbar-dark navbar navbar-expand-lg fixed-top mb-1">
     <div class="container">
       <a class="navbar-brand animated" data-animation="fadeInDown" data-animation-delay="1s" href="#head-area">
@@ -89,16 +84,21 @@
           </ul>
           <span id="slide-line"></span>
           <form class="form-inline mt-2 mt-md-0">
-            <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated" data-animation="fadeInDown" data-animation-delay="1.8s" href="https://pixinvent.com/demo/crypto-ico-admin/html/ltr/vertical-menu/account-login.html" target="_blank">Sign in</a>
+         <!--    <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated" data-animation="fadeInDown" data-animation-delay="1.8s" href="https://pixinvent.com/demo/crypto-ico-admin/html/ltr/vertical-menu/account-login.html" target="_blank">Sign in</a> -->
+            <% if current_user.blank? %>
+              <%= link_to "Signin", new_user_session_path, class: "btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated",
+              data: {animation: "fadeInDown", animation_delay: "1.8s", target: "_blank"}%>
+            <% end %>
+            <% if current_user %>
+              <%= link_to "Welcome: #{current_user.name}", user_path(current_user), class: "btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated",
+              data: {animation: "fadeInDown", animation_delay: "1.8s", target: "_blank"}%>
+            <% end %>
           </form>
         </div>
       </div>
     </div>
   </nav>
-  <!-- /Horizontal Menu End-->
 </header>
-<!-- /Header End-->
-<!-- //////////////////////////////////// CONTAINER ////////////////////////////////////-->
 <div class="content-wrapper">
   <div class="content-body">
     <main>
