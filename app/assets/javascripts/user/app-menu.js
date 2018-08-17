@@ -605,7 +605,7 @@
       else{
         topPos = menutop + $menuItem.height() + borderWidth;
       }
-      
+
       if($body.data('menu') == 'vertical-content-menu'){
         ul.addClass('menu-popout').appendTo('.main-menu-content').css({
           'top' : topPos,
