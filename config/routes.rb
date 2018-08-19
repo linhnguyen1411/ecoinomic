@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :user do
+    get 'referrals/index'
+  end
+
   devise_for :users, controllers: {registrations: "users/registrations",
     sessions: "users/sessions"}
 
@@ -15,5 +19,8 @@ Rails.application.routes.draw do
   scope module: "user" do
     resources :users
     get "/faq", to: "faqs#index"
+    get "/profile", to: "users#show"
+    get "/dashboard", to: "dashboards#index"
+    get "/referrals", to: "referrals#index"
   end
 end

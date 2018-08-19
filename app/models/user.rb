@@ -4,4 +4,6 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   ATTR = [:email, :password, :password_confirmation]
+
+  scope :by_referral, -> id {where ref_id: id}
 end

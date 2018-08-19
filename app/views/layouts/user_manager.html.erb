@@ -6,12 +6,20 @@
     <%= stylesheet_link_tag 'user_manager', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'user_manager', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body class="vertical-layout vertical-compact-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-compact-menu" data-col="2-columns">
-    <%= render "layouts/users/header" %>
-    <%= render "layouts/users/menu" %>
-    <%= yield %>
-    <footer class="footer footer-static footer-transparent">
-      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2018 <a class="text-bold-800 grey darken-2" href="#" target="_blank">NEETs Team </a>, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">We make it awesome <i class="ft-heart pink"></i></span></p>
-    </footer>
+  <body class="dashboard">
+    <div class="wrapper">
+      <div class="sidebar">
+        <%= render "layouts/users/menu" %>
+      </div>
+      <div class="main-panel">
+        <%= render "layouts/users/header" %>
+        <div class="content pt15">
+          <div class="container-fluid">
+            <div id="app">
+              <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
