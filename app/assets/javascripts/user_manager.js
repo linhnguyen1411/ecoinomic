@@ -12,12 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require user/bootstrap.min.js
-//= require user/perfect-scrollbar.js
-//= require user/charts/flot/jquery.flot.min.js
-//= require user/charts/echarts/echarts.js
-//= require user/charts/chart.min.js
-//= require user/charts/chartist.min.js
-//= require user/charts/chartist-plugin-tooltip.min.js
-//= require user/ui/prism.min.js
 //= require_tree ./user

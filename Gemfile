@@ -30,6 +30,7 @@ gem 'flag-icons-rails'
 gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
 gem 'perfect-scrollbar-rails', '~> 0.6.10'
 gem "carrierwave", "~> 1.0"
+gem 'material_icons'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-particles.js'

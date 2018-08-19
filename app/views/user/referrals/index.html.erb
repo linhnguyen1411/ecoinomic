@@ -1,0 +1,52 @@
+<div class="flex header-bar">
+  <h3 class="title">Referrals</h3>
+  <a href="#"><i class="material-icons">help</i></a>
+</div>
+<hr class="mt15">
+<div class="card mt15">
+  <div class="card-content">
+    <h5 class="fw400 mt0">Your referral link</h5>
+    <p>Use this link to invite your friend and earn<span class="fw500">   6%</span>  on the amount they invest</p>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-sm-8">
+        <div class="referral-control">
+          <input id="referral-link" type="text" readonly="readonly" value="<%= register_url + "?token_ref=" +  current_user.token_ref%>">
+          <button data-clipboard-target="#referral-link" data-toggle="tooltip" data-placement="bottom" title="" class="btn btn-copy btn-info btn-md" data-original-title="copied">
+            copy
+            <div class="ripple-container"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mt15">
+  <div class="card-content">
+    <h5>Your list</h5>
+    <% if @users.blank? %>
+      <p>Your have not introduced any users, let start by sharing your<span class="fw400">   referral link</span></p>
+    <% else %>
+      <p>You have invited <span class="number-invited"><%= @users.size %></span> people using your referral link</p>
+      <table class="table">
+        <thead class="ref-table">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Email</th>
+            <th scope="col">Invented</th>
+            <th scope="col">abcd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <th scope="row"><%= user.id %></th>
+              <td><%= user.email %></td>
+              <td>80000 $</td>
+              <td>Just For Fun</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>
