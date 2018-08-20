@@ -1,7 +1,5 @@
-class User::ReferralsController < ApplicationController
-  layout "user_manager"
+class User::ReferralsController < User::UserManagersController
 
-  before_action :authenticate_user!
   def index
     @users = User.by_referral current_user.id
   end

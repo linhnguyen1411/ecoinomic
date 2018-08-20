@@ -20,7 +20,10 @@ Rails.application.routes.draw do
     resources :users
     get "/faq", to: "faqs#index"
     get "/profile", to: "users#show"
+    get "/change_password", to: "users#change_password"
+    post "/change_password", to: "users#change_password"
     get "/dashboard", to: "dashboards#index"
     get "/referrals", to: "referrals#index"
+    resources :verifies, only: [:index, :update]
   end
 end

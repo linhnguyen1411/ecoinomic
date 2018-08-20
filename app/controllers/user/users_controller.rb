@@ -1,7 +1,4 @@
-class User::UsersController < ApplicationController
-
-  layout "user_manager"
-
+class User::UsersController < User::UserManagersController
   def index
     redirect_to user_path current_user
   end
@@ -9,4 +6,8 @@ class User::UsersController < ApplicationController
   def show
   end
 
+  def change_password
+    if current_user.valid_password?(params[:old_password])
+    end
+  end
 end
