@@ -10,5 +10,11 @@ $(document).ready(function() {
     document.execCommand("copy");
     toastr["info"]("Coppied");
   })
+
+  $('.coin-tranfer').on('change', '#inpETH', function(){
+    var inp = Number($('#inpETH').val());
+    var out = inp*1200;
+    $('#outNEET').val(out);
+  });
 })
 

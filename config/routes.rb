@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   namespace :user do
     get 'referrals/index'
   end
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   scope module: "landing" do
     resources :landings
   end
+
   scope module: "user" do
     resources :users
     get "/faq", to: "faqs#index"
@@ -25,5 +27,10 @@ Rails.application.routes.draw do
     get "/dashboard", to: "dashboards#index"
     get "/referrals", to: "referrals#index"
     resources :verifies, only: [:index, :update]
+  end
+
+  scope module: "admin", path: "admin", as: :admin do
+    resources :admins
+    get "/dashboard", to: "dashboards#index"
   end
 end
