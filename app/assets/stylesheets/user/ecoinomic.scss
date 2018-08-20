@@ -751,12 +751,38 @@ a.btn.btn-info.btn-xs.create-ticket{
   font-weight: bold;
   color: red;
 }
-.coin-balance {
-  text-align: center;
-  background-color: lightcoral;
-  color: white;
+.cl-lightcoral {
+  color: lightcoral!important;
 }
 .neet-rate {
   font-size: 25px;
   color: lightcoral;
+}
+.required {
+  color: red;
+}
+.btn-lightcoral {
+  background-color: lightcoral!important;
+  color: white!important;
+}
+.btn-buy-token {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 28px;
+    z-index: 1;
+    border: 3px double lightcoral;
+    width: 100%
+  }
+
+  .btn {
+    z-index: 2;
+    position: relative;
+  }
+}
+.bd-right-solid {
+  border-right: 1px solid #ccc
 }

@@ -13,5 +13,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w(devise_user.js devise_user.css
-  user_manager.js user_manager.css landing.js landing.css)
+  user_manager.js user_manager.css landing.js landing.css admin_manager.js admin_manager.css)
 Rails.application.config.assets.precompile += %w( particles.js )

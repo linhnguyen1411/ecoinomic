@@ -5,16 +5,70 @@
 <hr class="mt15">
 <div class="card mt15">
   <div class="card-content">
+    <p><i class="material-icons" style="color: red">warning</i> Your account is not
+      <%= link_to "verified", verifies_path%></p>
     <div class="row">
-      <div class="col-md-4 coin-balance">
+      <div class="col-md-4" align="center">
         <h5 class="fw400 mt0">Your NEET balance</h5>
-        5000 NEET
+        <br>
+        <h4><span class="cl-lightcoral" style="font-size: 35px">5000</span> NEET</h4>
       </div>
-
-      <div class="col-md-8 text-center coin-tranfer">
-        <div class="row neet-rate">
-          1 ETH = 1000 NEET
+      <div class="col-md-1"></div>
+      <div class="col-md-7 text-center coin-tranfer">
+        <div class="row neet-rate" align="center">
+          <i class="fa fa-calculator"></i>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="form-group col-sm-4">
+              <label for="inpETH" class="cl-lightcoral">ETH</label>
+              <input type="email" class="form-control" id="inpETH" aria-describedby="emailHelp" value="0">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="outNEET" class="cl-lightcoral">NEET</label>
+              <input readonly="true" value="0" disabled="true" type="email" class="form-control" id="outNEET" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="row" align="center">
+      <button type="button" data-toggle="modal" data-target="#buyToken" class="btn btn-lightcoral">Buy Now</button>
+    </div>
+  </div>
+</div>
+<hr class="mt15">
+
+<div class="modal fade" id="buyToken" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <div class="row btn-buy-token" align="center">
+          <div class="col-md-6">
+            <a class="btn btn-lightcoral">Pay with ETH</a>
+            <div class="row bd-right-solid">
+              <div class="form-group">
+                <label class="control-label col-sm-1" for="address-wallet">
+                  <i class="material-icons" style="color: lightcoral">account_balance_wallet</i>
+                </label>
+                <div class="col-sm-7">
+                  <input type="text" readonly="true" class="form-control" id="address-wallet" value="<%= current_user.token_ref %>">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <a class="btn btn-lightcoral">Pay with Visa/Master card</a>
+            <div class="row">
+              This function will comming soon
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
