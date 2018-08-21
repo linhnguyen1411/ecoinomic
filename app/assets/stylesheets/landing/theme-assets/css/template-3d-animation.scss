@@ -4503,7 +4503,8 @@ p {
 
 .contact:before {
   content : '';
-  background-image: image-url(landing/contact-shape) no-repeat center right;
+  /*background-image: image-url(landing/contact-shape);*/
+  background-repeat: no-repeat center right;
   width : 153px;
   position : absolute;
   right : 0;
