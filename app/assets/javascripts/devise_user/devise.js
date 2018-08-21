@@ -7,6 +7,10 @@ $(function() {
   }
   $("#js-form-register").on("submit", function(e){
     e.preventDefault();
+    if (!$("#agree-contract").is(':checked')) {
+      toastr["error"]("Please agree Crypto ICO's terms");
+      return;
+    }
     $("#js-form-register .btn-block").attr("disabled", true);
     var actionURL = $(this).attr("action");
     var url = new URL(location.href);
