@@ -9,9 +9,10 @@ class User::UsersController < User::UserManagersController
   def change_password
     @user = current_user
     return unless request.xhr?
-    @user.update_with_password password_params
+    status = @user.update_with_password password_params
+    bypass_sign_in @user if status
     render json: {
-      status: @user.errors.empty?,
+      status: status,
       errors: @user.errors.full_messages,
       message_success: "Your password has been changed"
     }
