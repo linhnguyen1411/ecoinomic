@@ -44,10 +44,11 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
   # Disable Rails's static asset server (Apache or nginx will already do this)
+  config.serve_static_files = true
   config.serve_static_assets = true
+
   # Generate digests for assets URLs
   config.assets.digest = true
-  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 

@@ -33,4 +33,5 @@ Rails.application.routes.draw do
     resources :admins
     get "/dashboard", to: "dashboards#index"
   end
+  get '*path' => redirect('/')
 end
