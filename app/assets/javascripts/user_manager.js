@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require plugin/lodash.min.js
 //= require plugin/toastr.min.js
 //= require_tree ./user
