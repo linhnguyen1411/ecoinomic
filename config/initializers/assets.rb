@@ -6,7 +6,6 @@ Rails.application.config.assets.version = '1.0'
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
-Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
 # Precompile additional assets.
@@ -16,5 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts
 Rails.application.config.assets.precompile += %w(devise_user.js devise_user.css
   user_manager.js user_manager.css landing.js landing.css admin_manager.js admin_manager.css)
 Rails.application.config.assets.precompile += %w( particles.js )
-Rails.application.config.assets.precompile << /\.(?:png|jpg|jpeg|gif)\z/
-Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+Rails.application.config.assets.precompile += %w(.svg .eot .woff .ttf .woff2 .otf)

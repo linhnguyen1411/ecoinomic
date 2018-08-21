@@ -321,7 +321,7 @@
               </div>
               <div class="col-md-12 col-lg-6 animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s">
                 <div class="position-relative what-is-crypto-img float-xl-right">
-                  <img class="img-fluid" src="/assets/landing/what-is-crypto.png" alt="What is Crypto?">
+                  <%= image_tag "landing/what-is-crypto.png", class: "img-fluid" %>
                   <div class="play-video text-center">
                     <a href="#" class="play rounded-circle btn-gradient-purple btn-glow video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/UXAJu3zS4bU" data-target="#ico-modal"><i class="ti-control-play"></i></a>
                     <span class="mt-2 d-none d-md-block">How it works</span>
@@ -355,14 +355,16 @@
                 <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">Even interoperating new technologies with old centralised resources can prove useful in making the paradigm shift from Web 2 to Web 3 happen. Now we own our data, we can prove that we own what we have and have created it on different platforms, but how do we put it together into a whole new cohesive framework.</p>
               </div>
               <div class="col-md-12 col-lg-6 text-center">
-                <img src="/assets/landing/problems-graphic.png" class="problems-img animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" alt="problems-graphic">
+                <%= image_tag "landing/problems-graphic.png", class: "problems-img animated", data: {animation: "fadeInUpShorter",
+                  aimation_delay: "0.5s"} %>
               </div>
             </div>
           </div>
           <div class="solutions mt-5">
             <div class="row">
               <div class="col-md-12 col-lg-6 text-center">
-                <img src="/assets/landing/solutions-graphic.png" class="solutions-img animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" alt="problems-graphic">
+                <%= image_tag "landing/solutions-graphic.png", class: "solutions-img animated", data: {animation: "fadeInUpShorter",
+                  aimation_delay: "0.5s"} %>
               </div>
               <div class="col-md-12 col-lg-6 move-first">
                 <div class="heading mb-4">
@@ -389,7 +391,7 @@
           <div class="row">
             <div class="col-lg-5 col-md-12">
               <div class="whitepaper-img">
-                <img class="img-fluid animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s" src="/assets/landing/whitepaper.png" alt="whitepaper">
+                <%= image_tag "landing/whitepaper.png", class: "img-fluid animated", data: { animation: "fadeInUpShorter", animation_delay: "0.6s"} %>
               </div>
             </div>
             <div class="col-lg-7 col-md-12">
@@ -402,7 +404,7 @@
                   <div class="row">
                     <div class="col-6 col-md-3 text-center mt-4 animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">
                       <a href="#" title="English">
-                        <img src="/assets/landing/flag-1.png" alt="English">
+                        <%= image_tag "landing/flag-1.png" %>
                         <div class="lang-text">
                           <span class="icon ti-download mr-1"></span>
                           <span class="language">English</span>
@@ -411,7 +413,7 @@
                     </div>
                     <div class="col-6 col-md-3 text-center mt-4 animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s">
                       <a href="#" title="Japanese">
-                        <img src="/assets/landing/flag-2.png" alt="English">
+                        <%= image_tag "landing/flag-2.png" %>
                         <div class="lang-text">
                           <span class="icon ti-download mr-1"></span>
                           <span class="language">Japanese</span>
@@ -420,7 +422,7 @@
                     </div>
                     <div class="col-6 col-md-3 text-center mt-4 animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s">
                       <a href="#" title="Russian">
-                        <img src="/assets/landing/flag-3.png" alt="English">
+                        <%= image_tag "landing/flag-3.png" %>
                         <div class="lang-text">
                           <span class="icon ti-download mr-1"></span>
                           <span class="language">Russian</span>
@@ -429,7 +431,7 @@
                     </div>
                     <div class="col-6 col-md-3 text-center mt-4 animated" data-animation="fadeInUpShorter" data-animation-delay="0.9s">
                       <a href="#" title="Chinese">
-                        <img src="/assets/landing/flag-4.png" alt="English">
+                        <%= image_tag "landing/flag-4.png" %>
                         <div class="lang-text">
                           <span class="icon ti-download mr-1"></span>
                           <span class="language">Chinese</span>
@@ -544,15 +546,15 @@
                   <li class="dark-bg-text-color"><i class="ti-stats-up white mr-3"></i>Latest cryptocurrency news</li>
                   <li class="dark-bg-text-color"><i class="ti-split-h white mr-3"></i>Cryptocurrency exchange</li>
                 </ul>
-                <a href="#" class="android mobile-button btn btn-gradient-purple btn-glow mr-4"><span>Android</span> <img src="/assets/landing/icon-android.png" alt=""></a>
-                <a href="#" class="apple mobile-button btn btn-gradient-purple btn-glow"><span>Apple</span> <img src="/assets/landing/icon-apple.png" alt=""></a>
+                <a href="#" class="android mobile-button btn btn-gradient-purple btn-glow mr-4"><span>Android</span> <%= image_tag "landing/icon-android.png" %></a>
+                <a href="#" class="apple mobile-button btn btn-gradient-purple btn-glow"><span>Apple</span> <%= image_tag "landing/icon-apple.png" %></a>
               </div>
               <div class="col-lg-6 col-md-12 move-first">
                 <div class="mobile-app-imgs">
-                  <img src="/assets/landing/mobile-app-1.png" alt="mobile-app" class="mobile-app-img-1 animated" data-animation="fadeInUpShorter" data-animation-delay="0.9s">
-                  <img src="/assets/landing/mobile-app-2.png" alt="mobile-app" class="mobile-app-img-2 animated" data-animation="zoomIn" data-animation-delay="1.4s">
-                  <img src="/assets/landing/mobile-app-3.png" alt="mobile-app" class="mobile-app-img-3 animated" data-animation="zoomIn" data-animation-delay="1.9s">
-                  <img src="/assets/landing/mobile-app-4.png" alt="mobile-app" class="mobile-app-img-4 animated" data-animation="zoomIn" data-animation-delay="2.4s">
+                  <%= image_tag "landing/mobile-app-1.png", class: "mobile-app-img-1 animated", data: {animation: "fadeInUpShorter", animation_delay: "0.9s"} %>
+                  <%= image_tag "landing/mobile-app-2.png", class: "mobile-app-img-2 animated", data: {animation: "zoomIn", animation_delay: "1.4s"} %>
+                  <%= image_tag "landing/mobile-app-3.png", class: "mobile-app-img-3 animated", data: {animation: "zoomIn", animation_delay: "1.9s"} %>
+                  <%= image_tag "landing/mobile-app-4.png", class: "mobile-app-img-4 animated", data: {animation: "zoomIn", animation_delay: "2.4s"} %>
                 </div>
               </div>
             </div>
@@ -666,7 +668,7 @@
           <div class="row">
             <div class="col-lg-5 col-md-12 animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">
               <div class="coin-img">
-                <img class="img-fluid" src="/assets/landing/our-coin.png" alt="Coin Image">
+                <%= image_tag "landing/our-coin.png", class: "img-fluid" %>
               </div>
             </div>
             <div class="col-lg-7 col-md-12">
@@ -705,7 +707,7 @@
             </div>
             <div class="col-md-12 col-lg-6 move-first animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s">
               <div class="token-img">
-                <img class="img-fluid" src="/assets/landing/chart.png" alt="token-distribution">
+                <%= image_tag "landing/chart.png", class: "img-fluid" %>
               </div>
             </div>
           </div>
@@ -745,7 +747,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.8s">
                 <div class="d-flex team-member">
                   <div class="team-img float-left mr-3" data-toggle="modal" data-target="#teamUser9">
-                    <img src="/assets/landing/user-9.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-9.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="profile align-self-center">
                     <div class="name">Logan S. Perez</div>
@@ -761,7 +763,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.9s">
                 <div class="d-flex team-member">
                   <div class="team-img float-left mr-3" data-toggle="modal" data-target="#teamUser6">
-                    <img src="/assets/landing/user-6.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-6.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="profile align-self-center">
                     <div class="name">Susan J. Newsom</div>
@@ -777,7 +779,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="1.0s">
                 <div class="d-flex team-member">
                   <div class="team-img float-left mr-3" data-toggle="modal" data-target="#teamUser2">
-                    <img src="/assets/landing/user-2.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-2.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="profile align-self-center">
                     <div class="name">Mary J. Wardle</div>
@@ -793,7 +795,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="1.1s" data-toggle="modal" data-target="#teamUser10">
                 <div class="d-flex team-member">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-10.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-10.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="profile align-self-center">
                     <div class="name">Nicholas M. Sharpe</div>
@@ -809,7 +811,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="1.2s" data-toggle="modal" data-target="#teamUser4">
                 <div class="d-flex team-member">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-4.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-4.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="profile align-self-center">
                     <div class="name">Cecelia T. Carter</div>
@@ -825,7 +827,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="1.3s" data-toggle="modal" data-target="#teamUser13">
                 <div class="d-flex team-member">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-13.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-13.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="profile align-self-center">
                     <div class="name">Terry T. Robinette</div>
@@ -860,7 +862,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.5s">
                 <div class="d-flex">
                   <div class="team-img float-left mr-3" data-toggle="modal" data-target="#teamUser1">
-                    <img src="/assets/landing/user-1.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-1.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="team-icon">
                     <i class="ti-linkedin"></i>
@@ -869,7 +871,7 @@
                     <div class="name">Nadia Sidko</div>
                     <div class="role">Blockchain Entrepreneur</div>
                     <div class="crypto-profile">
-                      <img src="/assets/landing/company-logo-1.png" alt="Team User">
+                      <%= image_tag "landing/company-logo-1.png" %>
                     </div>
                   </div>
                 </div>
@@ -877,7 +879,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.6s">
                 <div class="d-flex">
                   <div class="team-img float-left mr-3" data-toggle="modal" data-target="#teamUser8">
-                    <img src="/assets/landing/user-8.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-8.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="team-icon">
                     <i class="ti-linkedin"></i>
@@ -886,7 +888,7 @@
                     <div class="name">Pavel Volek</div>
                     <div class="role">Entrepreneur and Investor</div>
                     <div class="crypto-profile">
-                      <img src="/assets/landing/company-logo-2.png" alt="Team User">
+                      <%= image_tag "landing/company-logo-2.png" %>
                     </div>
                   </div>
                 </div>
@@ -894,7 +896,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.7s" data-toggle="modal" data-target="#teamUser3">
                 <div class="d-flex">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-3.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-3.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="team-icon">
                     <i class="ti-linkedin"></i>
@@ -903,7 +905,7 @@
                     <div class="name">Alyona Blakytna</div>
                     <div class="role">Fin-Tech Entrepreneur</div>
                     <div class="crypto-profile">
-                      <img src="/assets/landing/company-logo-3.png" alt="Team User">
+                      <%= image_tag "landing/company-logo-3.png" %>
                     </div>
                   </div>
                 </div>
@@ -911,7 +913,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.8s" data-toggle="modal" data-target="#teamUser11">
                 <div class="d-flex">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-11.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-11.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="team-icon">
                     <i class="ti-linkedin"></i>
@@ -920,7 +922,7 @@
                     <div class="name">Martin Solarik</div>
                     <div class="role">Fin-Tech Investor</div>
                     <div class="crypto-profile">
-                      <img src="/assets/landing/company-logo-4.png" alt="Team User">
+                      <%= image_tag "landing/company-logo-4.png" %>
                     </div>
                   </div>
                 </div>
@@ -928,7 +930,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="0.9s" data-toggle="modal" data-target="#teamUser7">
                 <div class="d-flex">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-7.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-7.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="team-icon">
                     <i class="ti-linkedin"></i>
@@ -937,7 +939,7 @@
                     <div class="name">Kate Fisenko</div>
                     <div class="role">Fin-Tech Investor</div>
                     <div class="crypto-profile">
-                      <img src="/assets/landing/company-logo-5.png" alt="Team User">
+                      <%= image_tag "landing/company-logo-5.png" %>
                     </div>
                   </div>
                 </div>
@@ -945,7 +947,7 @@
               <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated" data-animation="flipInX" data-animation-delay="1.0s" data-toggle="modal" data-target="#teamUser12">
                 <div class="d-flex">
                   <div class="team-img float-left mr-3">
-                    <img src="/assets/landing/user-12.png" alt="team-profile-1" class="rounded-circle" width="128">
+                    <%= image_tag "landing/user-12.png", class: "rounded-circle", width: "128" %>
                   </div>
                   <div class="team-icon">
                     <i class="ti-linkedin"></i>
@@ -954,7 +956,7 @@
                     <div class="name">Michal Krajnansky</div>
                     <div class="role">Blockchain Entrepreneur</div>
                     <div class="crypto-profile">
-                      <img src="/assets/landing/company-logo-1.png" alt="Team User">
+                      <%= image_tag "landing/company-logo-1.png" %>
                     </div>
                   </div>
                 </div>
@@ -1282,26 +1284,26 @@
           <div class="container">
             <div class="row listing list-unstyled">
               <div class="col d-none d-lg-block text-center animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">
-                <img src="/assets/landing/icon-arrow.png" alt="icon-arrow">
+                <%= image_tag "landing/icon-arrow.png" %>
                 <p class="mt-1">Exchange listing
                   <br>to be announced
                 </p>
               </div>
               <div class="col text-center animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
                 <h2>4.3/5</h2>
-                <img src="/assets/landing/ico-track.png" alt="ico-track">
+                <%= image_tag "landing/ico-track.png" %>
               </div>
               <div class="col text-center animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">
                 <h2>4.8/5</h2>
-                <img src="/assets/landing/ico-bench.png" alt="ico-bench">
+                <%= image_tag "landing/ico-bench.png" %>
               </div>
               <div class="col text-center animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">
                 <h2>3.9/5</h2>
-                <img src="/assets/landing/ico-ranker.png" alt="ico-ranker">
+                <%= image_tag "landing/ico-ranker.png" %>
               </div>
               <div class="col text-center animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">
                 <h2>4.1/5</h2>
-                <img src="/assets/landing/ico-bazaar.png" alt="ico-bazaar">
+                <%= image_tag "landing/ico-bazaar.png" %>
               </div>
             </div>
           </div>
@@ -1334,7 +1336,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-9-lg.jpg" alt="Logan S. Perez">
+                  <%= image_tag "landing/user-9-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser9Title">Logan S. Perez</h5>
@@ -1376,7 +1378,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-6-lg.jpg" alt="Susan J. Newsom">
+                  <%= image_tag "landing/user-6-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser6Title">Susan J. Newsom</h5>
@@ -1418,7 +1420,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-2-lg.jpg" alt="Mary J. Wardle">
+                  <%= image_tag "landing/user-2-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser2Title">Mary J. Wardle</h5>
@@ -1460,7 +1462,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-10-lg.jpg" alt="Nicholas M. Sharpe">
+                  <%= image_tag "landing/user-10-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser10Title">Nicholas M. Sharpe</h5>
@@ -1501,8 +1503,8 @@
             </button>
             <div class="modal-body">
               <div class="row p-4">
-                <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-4-lg.jpg" alt="Cecelia T. Carter">
+                <div class="col-12 col-md-5">r">
+                  <%= image_tag "landing/user-4-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser4Title">Cecelia T. Carter</h5>
@@ -1544,7 +1546,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-13-lg.jpg" alt="Terry T. Robinette">
+                  <%= image_tag "landing/user-13-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser13Title">Terry T. Robinette</h5>
@@ -1587,7 +1589,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-1-lg.jpg" alt="Nadia Sidko">
+                  <%= image_tag "landing/user-1-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser1Title">Nadia Sidko</h5>
@@ -1629,7 +1631,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-8-lg.jpg" alt="Pavel Volek">
+                  <%= image_tag "landing/user-8-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser8Title">Pavel Volek</h5>
@@ -1671,7 +1673,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-3-lg.jpg" alt="Alyona Blakytna">
+                  <%= image_tag "landing/user-3-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser3Title">Alyona Blakytna</h5>
@@ -1713,7 +1715,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-11-lg.jpg" alt="Martin Solarik">
+                  <%= image_tag "landing/user-11-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser11Title">Martin Solarik</h5>
@@ -1755,7 +1757,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-7-lg.jpg" alt="Kate Fisenko">
+                  <%= image_tag "landing/user-7-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser7Title">Kate Fisenko</h5>
@@ -1797,7 +1799,7 @@
             <div class="modal-body">
               <div class="row p-4">
                 <div class="col-12 col-md-5">
-                  <img class="img-fluid rounded" src="/assets/landing/user-12-lg.jpg" alt="Michal Krajnansky">
+                  <%= image_tag "landing/user-12-lg.jpg", class: "img-fluid rounded" %>
                 </div>
                 <div class="col-12 col-md-7 mt-sm-3">
                   <h5 id="teamUser12Title">Michal Krajnansky</h5>
@@ -1840,7 +1842,7 @@
         <div class="col-md-4">
           <div class="about">
             <div class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">
-              <img src="/assets/landing/logo.png" alt="Logo">
+              <%= image_tag "landing/logo.png" %>
               <span class="logo-text">Crypto ICO</span>
             </div>
             <div class="about-text animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">

@@ -27,7 +27,6 @@ gem "capistrano3-puma"
 gem "font-awesome-rails"
 gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 gem 'flag-icons-rails'
-gem 'bootstrap-glyphicons'
 gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
 gem 'perfect-scrollbar-rails', '~> 0.6.10'
 gem "carrierwave", "~> 1.0"
