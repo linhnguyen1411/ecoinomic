@@ -3,18 +3,25 @@ Rails.application.routes.draw do
     get 'stages/index'
   end
 
-  devise_for :admins
   namespace :user do
     get 'referrals/index'
   end
 
-  devise_for :users, controllers: {registrations: "users/registrations",
-    sessions: "users/sessions", passwords: "users/passwords"}
+  devise_for :user, controllers: {registrations: "user/registrations",
+    sessions: "user/sessions", passwords: "user/passwords"}
+
+  devise_for :admin, controllers: {sessions: "admin/sessions",
+    passwords: "admin/passwords"}
+
+  devise_scope :admin do
+    get "admin/login", to: "admin/sessions#new"
+    get "admin/logout", to: "admin/sessions#destroy"
+  end
 
   devise_scope :user do
-    get "login", to: "devise/sessions#new"
-    get "logout", to: "devise/sessions#destroy"
-    get "register", to: "devise/registrations#new"
+    get "login", to: "user/sessions#new"
+    get "logout", to: "user/sessions#destroy"
+    get "register", to: "user/registrations#new"
   end
 
   root to: "landing/landings#index", as: :user_root
