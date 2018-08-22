@@ -6,5 +6,7 @@
 //= require devise_user/app-menu.js
 //= require devise_user/app.js
 //= require devise_user/form-login-register.js
+//= require landing/theme-assets/vendors/particles.min.js
+//= require devise_user/particles-admin.js
 //= require_tree ./devise_user
 //= require plugin/toastr.min.js
