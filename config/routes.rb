@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'stages/index'
+  end
+
   devise_for :admins
   namespace :user do
     get 'referrals/index'
@@ -32,6 +36,7 @@ Rails.application.routes.draw do
   scope module: "admin", path: "admin", as: :admin do
     resources :admins
     get "/dashboard", to: "dashboards#index"
+    get "/stages", to: "stages#index"
   end
   get '*path' => redirect('/')
 end

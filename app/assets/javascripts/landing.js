@@ -18,7 +18,7 @@ $(document).ready(function() {
       }
     }
   });
-  clock.setTime(220880);
+  clock.setTime(5000000);
   clock.setCountdown(true);
   clock.start();
 });
