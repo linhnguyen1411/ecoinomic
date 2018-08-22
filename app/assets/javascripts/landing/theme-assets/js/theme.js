@@ -3,7 +3,7 @@
  *   Description: Theme related common JS.
  *   -------------------------------------------------------------------------------------------
  *   Item Name: Crypto ICO - Cryptocurrency Website Landing Page HTML + Dashboard Template
- *   Version: 1.0  
+ *   Version: 1.0
  *   Author: Pixinvent
  *   Author URL: http://www.themeforest.net/user/pixinvent
  **/
@@ -15,10 +15,10 @@ $(window).on('load', function() {
     setTimeout(function() {
         $('body').addClass('loaded');
     }, 200);
-    
+
     // Vertical Nav with social icons + telegram
     $('nav.vertical-social').midnight();
-    
+
     // Navbar dropdown on hover
     $('.navbar .dropdown').on('mouseover',function () {
         var $this = $(this).find('.dropdown-menu');
@@ -40,7 +40,7 @@ $(window).on('load', function() {
         }
     });
 
-    
+
 
     if($('.page-animated').length > 0){
         InitWaypointAnimations();
@@ -49,10 +49,10 @@ $(window).on('load', function() {
     setTimeout(function() {
         $('.cic-logo').addClass('cic-logo-animation');
         $('.svg-elements-1').addClass('svg-elements-1-animation');
-        $('.svg-elements-2').addClass('svg-elements-2-animation');        
+        $('.svg-elements-2').addClass('svg-elements-2-animation');
     }, 3000);
 
-    
+
 });
 
 (function(window, document, $) {
@@ -65,7 +65,7 @@ $(window).on('load', function() {
     //Init Navbar slideline function
     navbarSlideLine();
     //Update the slideline position on scroll/click
-    $(window).on('activate.bs.scrollspy', function(e) {        
+    $(window).on('activate.bs.scrollspy', function(e) {
         navbarSlideLine();
     });
 
@@ -75,22 +75,22 @@ $(window).on('load', function() {
         if (scroll >= 50) {
             if ($(window).width() > 992) {
                 $(".navbar").addClass("navbar-fixed navbar-shadow");
-                $(".navbar #slide-line").removeClass("d-none");                
-                inverseNavbar(true); // For inverse navbar            
+                $(".navbar #slide-line").removeClass("d-none");
+                inverseNavbar(true); // For inverse navbar
             }
         } else {
             $(".navbar").removeClass("navbar-fixed navbar-shadow");
-            $(".navbar #slide-line").addClass("d-none");            
+            $(".navbar #slide-line").addClass("d-none");
             inverseNavbar(false);
         }
     });
 
 
     // Navbar absolute position on small screen
-    navbarAbsolute();    
+    navbarAbsolute();
     $(window).resize(function() { /* Invoke on window resize */
         navbarAbsolute();
-    });    
+    });
 
     /* Menu navbar toggler animation */
     $('.main-menu .navbar-toggler').click(function(event) {
@@ -118,20 +118,7 @@ $(window).on('load', function() {
         }
     });
 
-    /* FlipClock Counter */
-    var clock;
-    clock = $('.clock').FlipClock({
-        clockFace: 'DailyCounter',
-        autoStart: false,
-        callbacks: {
-            stop: function() {
-                $('.message').html('The clock has stopped!')
-            }
-        }
-    });
-    clock.setTime(8100000);
-    clock.setCountdown(true);
-    clock.start();
+    /* FlipClock Counter *
 
     /* Video Modal Open / Close */
 
@@ -207,7 +194,7 @@ function inverseNavbar(isFixed){
         if(isFixed){
             $('.navbar-brand-logo-dark').removeClass('d-none');
             $('.navbar-brand-logo').addClass('d-none');
-            $('.btn-sign-in').removeClass('btn-light').addClass('btn-gradient-blue btn-glow');            
+            $('.btn-sign-in').removeClass('btn-light').addClass('btn-gradient-blue btn-glow');
         }else{
             $('.navbar-brand-logo-dark').addClass('d-none');
             $('.navbar-brand-logo').removeClass('d-none');

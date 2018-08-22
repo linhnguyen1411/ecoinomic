@@ -50,11 +50,27 @@
             <a class="btn btn-lightcoral">Pay with ETH</a>
             <div class="row bd-right-solid">
               <div class="form-group">
-                <label class="control-label col-sm-1" for="address-wallet">
+                <label for="address-wallet" class="col-control-label col-sm-1" for="address-wallet">
                   <i class="material-icons" style="color: lightcoral">account_balance_wallet</i>
                 </label>
                 <div class="col-sm-7">
                   <input type="text" readonly="true" class="form-control" id="address-wallet" value="<%= current_user.token_ref %>">
+                </div>
+              </div>
+            </div>
+            <div class="row bd-right-solid" style="padding-right: 5px">
+              <div class="card ">
+                <div class="card-header" style="background-color: lightgreen;">
+                  <span class="badge badge-info">Info</span>
+                  If you provide payment to this address atf tokens will be automatically sent to the eth address that you have specified
+                </div>
+                <div class="card-body" align="left">
+                  <div style="padding-left: 5px;">
+                    <p>1. If you still dont have an ETH wallet, You can create it at myethwallet.com</p>
+                    <p>2. Copy the address and paste it into your application to send ETH</p>
+                    <p>3. User the wallet that you have previously added to your account</p>
+                    <p>4. Recommended parameters are the Gas Limit of 20000 and Gas price of 20-79 Gwei</p>
+                  </div>
                 </div>
               </div>
             </div>
