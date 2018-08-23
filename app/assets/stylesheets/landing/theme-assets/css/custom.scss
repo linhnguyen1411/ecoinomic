@@ -1,7 +1,59 @@
+@font-face {
+  font-family: "TTF-Bold";
+  src: asset-url("TTF-Bold.otf");
+}
+
+@font-face {
+  font-family: "TTF-Extrabold";
+  src: asset-url("TTF-Extrabold.otf");
+}
+
+@font-face {
+  font-family: "TTF-Hairline";
+  src: asset-url("TTF-Hairline.otf");
+}
+
+@font-face {
+  font-family: "TTF-Italic";
+  src: asset-url("TTF-Italic.otf");
+}
+
+@font-face {
+  font-family: "TTF-Medium";
+  src: asset-url("TTF-Medium.otf");
+}
+
+@font-face {
+  font-family: "TTF-MediumItalic";
+  src: asset-url("TTF-MediumItalic.otf");
+}
+
+@font-face {
+  font-family: "TTF-Regular";
+  src: asset-url("TTF-Regular.otf");
+}
+
+body {
+  h1 {
+    font-family: TTF-Extrabold!important;
+  }
+}
+
 #about, #whitepaper, #roadmap, #token-distribution, #advisor {
   background-color: white;
 
-  h6, h4, h2, p, span, strong, div {
+  h6, h4, h2, p, strong, div, a {
     color: black;
+    font-family: TTF-Bold;
+  }
+  span {
+    color: black;
+  }
+}
+
+#problem-solution, #token-sale-mobile-app, #our-coin, #team {
+  h6, h4, h2, p, span, strong, div, li, button {
+    color: white!important;
+    font-family: TTF-Medium;
   }
 }
