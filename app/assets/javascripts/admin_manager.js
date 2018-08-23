@@ -15,4 +15,5 @@
 //= require plugin/toastr.min.js
 //= require admin/jquery-1.11.1.min.js
 //= require admin/bootstrap.min.js
+//= require plugin/toastr.min.js
 //= require_tree ./admin

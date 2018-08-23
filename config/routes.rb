@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :user do
+    get 'buy_tokens/index'
+  end
+
   namespace :admin do
     get 'stages/index'
   end
@@ -37,6 +41,7 @@ Rails.application.routes.draw do
     put "/change_password", to: "users#change_password"
     get "/dashboard", to: "dashboards#index"
     get "/referrals", to: "referrals#index"
+    get "/buy_tokens", to: "buy_tokens#index"
     resources :verifies, only: [:index, :update]
   end
 
