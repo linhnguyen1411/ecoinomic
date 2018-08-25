@@ -38,6 +38,58 @@ $(document).ready(function(){
       }
     });
   });
+
+
+  $("#js-forgot-form").on("submit", function(e){
+    e.preventDefault();
+    $("#js-forgot-form .btn-block").attr("disabled", true);
+    var actionURL = $(this).attr("action");
+
+    $.ajax({
+      url: actionURL,
+      method: "POST",
+      dataType: "json",
+      data: new FormData(this),
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        setTimeOutSubmit("#js-forgot-form .btn-block");
+        if (response.status) {
+          toastr["success"](response.message_success);
+          $("#js-render").html(response.html);
+        } else {
+          toastr["error"](response.errors);
+        }
+      }
+    });
+  });
+
+  $("#js-changepass-form").on("submit", function(e){
+    e.preventDefault();
+    $("#js-changepass-form .btn-block").attr("disabled", true);
+    var actionURL = $(this).attr("action");
+
+    $.ajax({
+      url: actionURL,
+      method: "PUT",
+      dataType: "json",
+      data: new FormData(this),
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        setTimeOutSubmit("#js-changepass-form .btn-block");
+        if (response.status) {
+          location.href = response.redirect_path;
+        } else {
+          var messages = "";
+          _.forEach(response.errors, function(value, key){
+            messages += value + "</br>";
+          })
+          toastr["error"](messages);
+        }
+      }
+    });
+  });
 });
 
 function setTimeOutSubmit(elm) {
