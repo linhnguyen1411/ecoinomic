@@ -7,9 +7,16 @@ class Admin::PasswordsController < Devise::PasswordsController
   # end
 
   # POST /resource/password
-  # def create
-  #   super
-  # end
+  def create
+    admin = Admin.find_by email: params[:admin][:email]
+    admin&.send_reset_password_instructions
+    render json: {
+      status: admin.present?,
+      errors: "Admin not available.",
+      message_success: t("devise.passwords.send_instructions"),
+      html: render_to_string(partial: "user/passwords/send_mail_success")
+    }
+  end
 
   # GET /resource/password/edit?reset_password_token=abcdef
   # def edit
@@ -17,9 +24,15 @@ class Admin::PasswordsController < Devise::PasswordsController
   # end
 
   # PUT /resource/password
-  # def update
-  #   super
-  # end
+  def update
+    admin = Admin.reset_password_by_token(resource_params)
+    status = admin && admin.errors.empty?
+    render json: {
+      status: status,
+      errors: admin&.errors&.full_messages || ["Reset password token is invalid"],
+      redirect_path: admin_login_path
+    }
+  end
 
   # protected
 
