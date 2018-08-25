@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180821131516) do
+ActiveRecord::Schema.define(version: 20180825091538) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "email", default: "", null: false
@@ -31,6 +31,19 @@ ActiveRecord::Schema.define(version: 20180821131516) do
 
   create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+    t.integer "stage_type"
+    t.string "start_date_1"
+    t.string "end_date_1"
+    t.string "start_date_2"
+    t.string "end_date_2"
+    t.integer "coin_1"
+    t.integer "coin_2"
+    t.integer "progess"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

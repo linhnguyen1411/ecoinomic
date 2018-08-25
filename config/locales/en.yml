@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  enum_label:
+    stage_types:
+      subcrible: "Hiển thị form cho user điền email subcrible"
+      re_subcrible: "Trang chủ hiển thị form nhập email subcrible"
+      register: "Cho phép người dùng đăng ký tài khoản"
+      re_register: "Trang chủ hiển thị nút đăng ký tài khoản"
+      buy_coin: "Cho phép người dùng mua token"
+      re_buy_coin: "Mở chức năng Buy Token ở trang người dùng"
+      ended: "Kết thúc bán token"
+      re_ended: "Kết thúc giai đoạn bán token"

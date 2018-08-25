@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require constant
 //= require plugin/toastr.min.js
 //= require admin/jquery-1.11.1.min.js
 //= require admin/bootstrap.min.js

@@ -49,6 +49,11 @@ Rails.application.routes.draw do
     resources :admins
     get "/dashboard", to: "dashboards#index"
     get "/stages", to: "stages#index"
+    resource :stages do
+      collection do
+        get "load_data"
+      end
+    end
   end
   get '*path' => redirect('/')
 end
