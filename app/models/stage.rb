@@ -49,13 +49,13 @@ class Stage < ApplicationRecord
   end
 
   def end_date_more_start
-    if self.end_date_1 < self.start_date_1
+    if self.end_date_1 && self.start_date_1  && self.end_date_1 < self.start_date_1
       errors.add :end_date_1, "Must be greater than the start date"
     end
-    if self.end_date_2 < self.start_date_2
+    if self.end_date_2 && self.start_date_2 && self.end_date_2 < self.start_date_2
       errors.add :end_date_2, "Must be greater than the start date"
     end
-    if self.start_date_2 < self.end_date_1
+    if self.start_date_2 && self.end_date_1 && self.start_date_2 < self.end_date_1
       errors.add :start_date_2, "Must be greater than the stage PreSale"
     end
   end
