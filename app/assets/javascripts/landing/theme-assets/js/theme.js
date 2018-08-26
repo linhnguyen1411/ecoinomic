@@ -118,11 +118,6 @@ $(window).on('load', function() {
         }
     });
 
-    /* FlipClock Counter *
-
-    /* Video Modal Open / Close */
-
-    /* Gets the video src from the data-src on video button */
     var $videoSrc;
     $('.video-btn').click(function() {
         $videoSrc = $(this).data("src");
