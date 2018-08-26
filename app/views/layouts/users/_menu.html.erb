@@ -7,29 +7,31 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li>
-        <a href="/dashboard">
-          <i class="material-icons">dashboard</i>
-          <p>Dashboard</p>
-        </a>
-      </li>
-      <li>
         <a href="profile">
           <i class="material-icons" style="color: black">person_outline</i>
           <p>Account</p>
         </a>
       </li>
-      <li>
-        <a href="/verifies">
-          <i class="material-icons">verified_user</i>
-          <p>Verify</p>
-        </a>
-      </li>
-      <li>
-        <a href="/buy_tokens">
-          <i class="material-icons">account_balance_wallet</i>
-          <p>Buy Token</p>
-        </a>
-      </li>
+      <% if @admin_setting.buy_coin? %>
+        <li>
+          <a href="/dashboard">
+            <i class="material-icons">dashboard</i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li>
+          <a href="/verifies">
+            <i class="material-icons">verified_user</i>
+            <p>Verify</p>
+          </a>
+        </li>
+        <li>
+          <a href="/buy_tokens">
+            <i class="material-icons">account_balance_wallet</i>
+            <p>Buy Token</p>
+          </a>
+        </li>
+      <% end %>
       <li>
         <a href="/referrals">
           <i class="material-icons">list</i>

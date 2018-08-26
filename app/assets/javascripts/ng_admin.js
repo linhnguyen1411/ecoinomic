@@ -7,4 +7,3 @@
 //= require angular/app/admin_app
 //= require_tree ./angular/services/admin
 //= require_tree ./angular/controllers/admin
-//= require_tree ./angular/directives/admin
