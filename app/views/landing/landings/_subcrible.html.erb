@@ -4,11 +4,12 @@
   </h3>
   <form>
     <div class="input-group animated subcrible-email" data-animation="fadeInUpShorter" data-animation-delay="1.7s">
-      <input id="email" type="text" class="form-control" name="email"
+      <input id="email-subcrible" type="email" class="form-control" name="email"
         placeholder="Type your email for subcrible">
     </div>
     <div class="mt-1" align="center">
-      <a href="#" class="btn btn-lg btn-gradient-purple btn-glow mr-4 mb-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s">Subcrible</a>
+      <a href="javascript:void(0)" class="btn btn-lg btn-gradient-purple btn-glow mr-4 mb-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s" id="js-subrible-email">Subcrible</a>
     </div>
+    <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
   </form>
 </div>
