@@ -1,7 +1,7 @@
 class Stage < ApplicationRecord
   enum stage_type: {subcrible: 1, register: 2, buy_coin: 3, ended: 4}
 
-  validates :stage_type, :start_date_1, :end_date_1, presence: true
+  validates :stage_type, presence: true
 
   class << self
     def enums_for_select name

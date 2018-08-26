@@ -1,104 +1,3 @@
-<div id="loader-wrapper">
-  <svg viewbox=" 0 0 512 512" id="loader">
-    <linearGradient id="loaderLinearColors" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="5%" stop-color="#28bcfd"></stop>
-      <stop offset="100%" stop-color="#1d78ff"></stop>
-    </linearGradient>
-    <g>
-      <circle cx="256" cy="256" r="150" fill="none" stroke="url(#loaderLinearColors)" />
-    </g>
-    <g>
-      <circle cx="256" cy="256" r="125" fill="none" stroke="url(#loaderLinearColors)" />
-    </g>
-    <g>
-      <circle cx="256" cy="256" r="100" fill="none" stroke="url(#loaderLinearColors)" />
-    </g>
-    <g>
-      <circle cx="256" cy="256" r="75" fill="none" stroke="url(#loaderLinearColors)" />
-    </g>
-    <circle cx="256" cy="256" r="60" fill="url(#loaderImage)" stroke="none" stroke-width="0" />
-    <defs>
-      <pattern id="loaderImage" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-        <%= image_tag "landing/loader-logo.png", preserveAspectRatio: "none", width: "1", height: "1" %>
-      </pattern>
-    </defs>
-  </svg>
-  <div class="loader-section section-left"></div>
-  <div class="loader-section section-right"></div>
-</div>
-<nav class="vertical-social">
-  <ul>
-    <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
-    <li><a href="#"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
-    <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-    <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-  </ul>
-</nav>
-<header class="page-header">
-  <nav class="main-menu static-top navbar-dark navbar navbar-expand-lg fixed-top mb-1">
-    <div class="container">
-      <a class="navbar-brand animated" data-animation="fadeInDown" data-animation-delay="1s" href="#head-area">
-      <%= image_tag "landing/logo.png", alt: "Crypto Logo" %>
-      <span class="brand-text">
-      <span class="font-weight-bold">Crypto</span> ICO</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div id="navigation" class="navbar-nav ml-auto">
-          <ul class="navbar-nav mt-1">
-            <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.1s">
-              <a class="nav-link" href="#about">What is ICO</a>
-            </li>
-            <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.2s">
-              <a class="nav-link" href="#problem-solution">Solutions</a>
-            </li>
-            <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.3s">
-              <a class="nav-link" href="#whitepaper">Whitepaper</a>
-            </li>
-            <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.4s">
-              <a class="nav-link" href="#token-sale-mobile-app">Token Sale</a>
-            </li>
-            <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.5s">
-              <a class="nav-link" href="#roadmap">Roadmap</a>
-            </li>
-            <li class="dropdown show mr-2 px-2 animated" data-animation="fadeInDown" data-animation-delay="1.6s">
-              <a class="dropdown-toggle white" href="#" role="button" id="more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
-              <div class="dropdown-menu" aria-labelledby="more">
-                <a class="dropdown-item" href="index.html#mobile-app">App</a>
-                <a class="dropdown-item" href="index.html#team">Team</a>
-                <a class="dropdown-item" href="index.html#faq">FAQ</a>
-                <a class="dropdown-item" href="index.html#contact">Contact</a>
-                <a class="dropdown-item" href="template-404.html">404</a>
-                <a class="dropdown-item" href="template-inner-page-with-sidebar.html">Sample Page</a>
-              </div>
-            </li>
-            <li class="dropdown show mr-4 animated" data-animation="fadeInDown" data-animation-delay="1.7s">
-              <a class="dropdown-toggle" href="#" role="button" id="language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-us"></span> EN</a>
-              <div class="dropdown-menu" aria-labelledby="language">
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-de"></span> GN</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span> SP</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-mq"></span> FR</a>
-              </div>
-            </li>
-          </ul>
-          <span id="slide-line"></span>
-          <form class="form-inline mt-2 mt-md-0">
-         <!--    <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated" data-animation="fadeInDown" data-animation-delay="1.8s" href="https://pixinvent.com/demo/crypto-ico-admin/html/ltr/vertical-menu/account-login.html" target="_blank">Sign in</a> -->
-            <% if current_user.blank? %>
-              <%= link_to "Signin", new_user_session_path, class: "btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated",
-              data: {animation: "fadeInDown", animation_delay: "1.8s", target: "_blank"}%>
-            <% end %>
-            <% if current_user %>
-              <%= link_to "Profile", user_path(current_user), class: "btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0 animated",
-              data: {animation: "fadeInDown", animation_delay: "1.8s", target: "_blank"}%>
-            <% end %>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 <div class="content-wrapper">
   <div class="content-body">
     <main>
@@ -108,14 +7,7 @@
             <div class="banner-wrapper">
               <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                  <div class="banner-content pt-5">
-                    <h1 class="best-template animated" data-animation="fadeInUpShorter" data-animation-delay="1.5s">Crypto ICO is modern, clean and <br class="d-none d-xl-block">gradient ui ico most trending <br class="d-none d-xl-block">template of 2018</h1>
-                    <h3 class="d-block white animated" data-animation="fadeInUpShorter" data-animation-delay="1.6s">First decentralized marketing platform that allows <br class="d-none d-xl-block">merchants and affiliates.</h3>
-                    <div class="mt-5">
-                      <a href="#token-sale-mobile-app" class="btn btn-lg btn-gradient-purple btn-glow mr-4 mb-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s">Purchase Token</a>
-                      <a href="#whitepaper" class="btn btn-lg btn-gradient-purple btn-glow mb-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.8s">Whitepaper</a>
-                    </div>
-                  </div>
+                  <%= render "#{@stage}" %>
                 </div>
                 <div class="col-lg-6 col-md-12 move-first">
                   <div id="svg-animation">
@@ -206,7 +98,7 @@
                             <path class="animated" data-animation="path" data-animation-delay="2.4s" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(99,125,221)" stroke-opacity="1" stroke-width="3" d="M101.68,24.545l-25-15  c0,0-6.14-6-14-1l-28,17c0,0-6.4,5.16-5-30v-20c0,0,0.8-5.6-4-5l-35,25c0,0-5.2,1.6-4,18v90c0,0-1.6,9.8,6,11l40,25c0,0,7,2.6,2,7  l-35,20"></path>
                           </g>
                         </g>
-                        <!-- logo-base -->
+                        logo-base
                         <g transform="matrix(1,0,0,1,255,345)" opacity="0.5">
                           <image class="animated" data-animation="fadeInLeftShorter" data-animation-delay="1.4s" width="250px" height="260px" preserveAspectRatio="xMidYMid slice"
                           href="<%= asset_path("landing/svg/svg-animation/logo-base.svg")%>"></image>
@@ -472,7 +364,7 @@
         </div>
       </section>
       <section id="token-sale-mobile-app" class="token-sale-mobile-app section-padding ">
-        <div class="token-sale">
+       <!--  <div class="token-sale">
           <div class="container">
             <div class="heading text-center">
               <h6 class="sub-title">Pre-Sale &amp; Values</h6>
@@ -542,7 +434,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div id="mobile-app" class="mobile-app">
           <div class="container">
             <div class="heading text-center">
@@ -1507,51 +1399,3 @@
     </main>
   </div>
 </div>
-<!-- //////////////////////////////////// FOOTER ////////////////////////////////////-->
-<footer class="footer static-bottom footer-dark footer-custom-class" data-midnight="white">
-  <div class="container">
-    <div class="footer-wrapper">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-          <div class="about">
-            <div class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">
-              <%= image_tag "landing/logo.png" %>
-              <span class="logo-text">Crypto ICO</span>
-            </div>
-            <div class="about-text animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
-              <p class="grey-accent2">Crypto Ico is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
-            </div>
-            <ul class="social-buttons list-unstyled mb-5">
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s"><a href="#" title="Facebook" class="btn font-medium"><i class="ti-facebook"></i></a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s"><a href="#" title="Twitter" class="btn font-medium"><i class="ti-twitter-alt"></i></a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s"><a href="#" title="LinkedIn" class="btn font-medium"><i class="ti-linkedin"></i></a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s"><a href="#" title="GitHub" class="btn font-medium"><i class="ti-github"></i></a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s"><a href="#" title="Pintrest" class="btn font-medium"><i class="ti-pinterest"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="links">
-            <h5 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">Useful Links</h5>
-            <ul class="useful-links float-left mr-5">
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s"><a href="#">What is ICO</a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s"><a href="#">Solutions</a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s"><a href="#">Whitepaper </a></li>
-            </ul>
-            <ul class="useful-links">
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.9s"><a href="#">Roadmap</a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.0s"><a href="#">Team</a></li>
-              <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.1s"><a href="#">Sign in</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-        </div>
-      </div>
-      <div class="copy-right mx-auto text-center">
-        <span class="copyright">Copyright &copy; 2018, Crypto ICO. Template Designed by <a href="http://pixinvent.com" title="pixinvent" class="white">Pixinvent</a></span>
-      </div>
-    </div>
-  </div>
-</footer>
