@@ -5,6 +5,7 @@
 //= require landing/theme-assets/vendors/flipclock/flipclock.min.js
 //= require landing/theme-assets/vendors/particles.js
 //= require swiper
+//= require plugin/toastr.min.js
 //= require_tree ./landing
 var clock;
 $(document).ready(function() {

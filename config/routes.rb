@@ -30,7 +30,11 @@ Rails.application.routes.draw do
 
   root to: "landing/landings#index", as: :user_root
   scope module: "landing" do
-    resources :landings
+    resource :landings do
+      collection do
+        post "subcrible"
+      end
+    end
   end
 
   scope module: "user" do
