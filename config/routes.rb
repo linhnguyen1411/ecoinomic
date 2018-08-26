@@ -59,6 +59,7 @@ Rails.application.routes.draw do
         get "load_data"
       end
     end
+    resources :images
   end
   get '*path' => redirect('/')
 end
