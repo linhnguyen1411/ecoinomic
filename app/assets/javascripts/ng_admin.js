@@ -1,4 +1,3 @@
-//= require plugin/lodash.min.js
 //= require angular/lib/angular.min
 //= require angular/lib/angular-animate.min
 //= require angular/lib/angular-messages.min

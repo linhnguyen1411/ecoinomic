@@ -31,79 +31,165 @@
               <div ng-repeat="stage_type in vm.stage_types track by $index"
                  class="radio pd-bot-15">
                 <label for="radio-{{$index}}">
-                  <input type="radio" id="radio-{{$index}}" value="{{stage_type.id}}">
+                  <input type="radio" id="radio-{{$index}}" value="{{stage_type.id}}" ng-model="vm.stage.stage_type">
                   {{$index + 1}}. {{stage_type.name}}
                 </label>
                 <ul class="fa-ul list-li-push stage-info">
                   <li><i class="fa fa-li fa-check text-success">
                   </i>{{stage_type.re_name}}</li>
                 </ul>
-              </div>
-              <div class="stage-setting" style="padding-left: 25px; padding-right: 25px">
-                  <div class="">
-                    <h4><strong>Thiết lập mốc thời gian cho các giai đoạn</strong></h4>
-                    <div class="form-group">
-                      <div class="col-md-9">
-                        <label class="control-label">PreSale</label>
-                        <div class="col-md-12">
-                          <div class="input-group input-daterange" data-date-format="mm/dd/yyyy HH:mm">
-                            <input type="text" id="example-daterange1" name="example-daterange1"
-                              class="form-control text-center" placeholder="From">
-                            <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
-                            <input type="text" id="example-daterange2" name="example-daterange2"
-                              class="form-control text-center" placeholder="To">
-                          </div>
+
+                <!-- <div class="stage-setting" ng-if="vm.stage.stage_type === 'subcrible'
+                  && stage_type.id === 'subcrible'">
+                  <h4><strong>Thiết lập gian cho giai đoạn subcrible</strong></h4>
+                  <div class="row form-group">
+                    <div class="col-md-8">
+                      <div class="form-group-validate">
+                        <label class="col-md-2 control-label" for="example-datepicker">Start</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.start_subcrible" name="stage[start_subcrible]"
+                            class="form-control text-center input-datepicker" placeholder="From">
                         </div>
                       </div>
-                      <div class="col-md-3">
-                        <label class="control-label">PreSale Price</label>
-                        <div class="col-md-12 price">
-                          <label class="col-md-4 control-label" for="example-hf-email">1 ETH = </label>
-                          <div class="col-md-6">
-                            <input type="email" id="example-hf-email" name="example-hf-email" class="form-control">
-                          </div>
-                          <label class="col-md-2 control-label">NEET</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-md-9">
-                        <label class="control-label">CrowSale</label>
-                        <div class="col-md-12">
-                          <div class="input-group input-daterange" data-date-format="mm/dd/yyyy HH:mm">
-                            <input type="text" id="example-daterange3" name="example-daterange1" class="form-control text-center" placeholder="From">
-                            <span class="input-group-addon"><i class="fa fa-angle-right"></i></span>
-                            <input type="text" id="example-daterange4" name="example-daterange2" class="form-control text-center" placeholder="To">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <label class="control-label">CrowSale Price</label>
-                        <div class="col-md-12 price">
-                          <label class="col-md-4 control-label" for="example-hf-email1">1 ETH = </label>
-                          <div class="col-md-6">
-                            <input type="text" id="example-hf-email1" name="example-hf-email1" class="form-control">
-                          </div>
-                          <label class="col-md-2 control-label">NEET</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-md-3">
-                        <label class="control-label">Tiến độ</label>
-                        <div class="col-md-12">
-                          <input type="text" id="progress-percent" name="example-hf-email" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-9"></div>
-                      <div class="col-md-12" style="padding-left: 30px;">
-                        <div class="progress progress-striped active">
-                          <div class="progress-bar progress-bar-danger" id="stage-progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">20%</div>
+                      <div class="form-group-validate">
+                        <label class="col-md-1 control-label" for="example-datepicker">End</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.end_subcrible" name="stage[end_subcrible]"
+                            class="form-control text-center input-datepicker" placeholder="To">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <div class="stage-setting" ng-if="vm.stage.stage_type === 'register'
+                  && stage_type.id === 'register'">
+                  <h4><strong>Thiết lập gian cho giai đoạn đăng kí</strong></h4>
+                  <div class="row form-group">
+                    <div class="col-md-8">
+                      <div class="form-group-validate">
+                        <label class="col-md-2 control-label" for="example-datepicker">Start</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.start_register" name="stage[start_register]"
+                            class="form-control text-center input-datepicker" placeholder="From">
+                        </div>
+                      </div>
+                      <div class="form-group-validate">
+                        <label class="col-md-1 control-label" for="example-datepicker">End</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.end_register" name="stage[end_register]"
+                            class="form-control text-center input-datepicker" placeholder="To">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="stage-setting" ng-show="vm.stage.stage_type === 'buy_coin'
+                  && stage_type.id === 'buy_coin'">
+                  <h4><strong>Thiết lập gian cho giai đoạn mua token</strong></h4>
+                  <div class="row form-group">
+                    <div class="col-md-8">
+                    <label class="control-label">PreSale</label>
+                      <div class="form-group-validate">
+                        <label class="col-md-2 control-label" for="example-datepicker">Start</label>
+                        <div class="col-md-4" >
+                          <input type="text" name="stage[start_date_1]" ng-model="vm.stage.start_date_1"
+                            class="form-control text-center input-datepicker" placeholder="From">
+                        </div>
+                      </div>
+                      <div class="form-group-validate">
+                        <label class="col-md-1 control-label" for="example-datepicker">End</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.end_date_1" name="stage[end_date_1]"
+                            class="form-control text-center input-datepicker" placeholder="To">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="control-label">PreSale Price</label>
+                      <div class="form-group-validate">
+                        <label class="col-md-4 control-label">1 ETH = </label>
+                        <div class="col-md-6">
+                          <input type="number" ng-model="vm.stage.coin_1" class="form-control"
+                            name="stage[coin_1]">
+                        </div>
+                        <label class="col-md-2 control-label">NEET</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-8">
+                      <label class="control-label">CrowSale</label>
+                      <div class="form-group-validate">
+                        <label class="col-md-2 control-label" for="example-datepicker">Start</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.start_date_2" name="stage[start_date_2]"
+                            class="form-control text-center input-datepicker" placeholder="From">
+                        </div>
+                      </div>
+                      <div class="form-group-validate">
+                        <label class="col-md-1 control-label" for="example-datepicker">End</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.end_date_2" name="stage[end_date_2]"
+                            class="form-control text-center input-datepicker" placeholder="To">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="control-label">CrowSale Price</label>
+                      <div class="form-group-validate">
+                        <label class="col-md-4 control-label">1 ETH = </label>
+                        <div class="col-md-6">
+                          <input type="number" ng-model="vm.stage.coin_2" class="form-control"
+                            name="stage[coin_2]">
+                        </div>
+                        <label class="col-md-2 control-label">NEET</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group border-bottom-none">
+                    <div class="form-group-validate">
+                      <div class="col-md-8">
+                        <label class="control-label col-md-2">Tiến độ</label>
+                        <div class="col-md-4">
+                          <input type="number" ng-model="vm.stage.progess" name="stage[progess]"
+                            class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="progress progress-striped active">
+                      <div class="progress-bar progress-bar-danger stage-progress" id="stage-progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{vm.stage.progess}}%">{{vm.stage.progess}}%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="stage-setting" ng-if="vm.stage.stage_type === 'ended'
+                  && stage_type.id === 'ended'">
+                  <h4><strong>Thiết lập gian cho giai đoạn kết thúc</strong></h4>
+                  <div class="row form-group">
+                    <div class="col-md-8">
+                      <div class="form-group-validate">
+                        <label class="col-md-2 control-label" for="example-datepicker">End</label>
+                        <div class="col-md-4">
+                          <input type="text" ng-model="vm.stage.end_ended" name="stage[end_ended]"
+                            class="form-control text-center input-datepicker" placeholder="From">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
+              <div class="col-md-9">
+                <button type="button" ng-click="vm.createData()"
+                  class="btn btn-sm btn-primary">
+                  <i class="fa fa-angle-right"></i> Save</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

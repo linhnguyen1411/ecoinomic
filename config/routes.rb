@@ -51,6 +51,7 @@ Rails.application.routes.draw do
     get "/stages", to: "stages#index"
     resource :stages do
       collection do
+        post "create"
         get "load_data"
       end
     end
