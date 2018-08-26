@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  clockTime();
+});
+function clockTime() {
   var clock;
   var presale = $('.presale-count').val();
   clock = $('.clock').FlipClock(presale,{
@@ -6,10 +9,17 @@ $(document).ready(function() {
     autoStart: false,
     callbacks: {
       stop: function() {
-        $('.message').html('The clock has stopped!')
+        $.ajax({
+          url: "landing/landings",
+          method: "GET",
+          success: function(response) {
+            $(".token-sale-counter").replaceWith(response.html);
+            clockTime();
+          }
+        });
       }
     }
   });
   clock.setCountdown(true);
   clock.start();
-});
+}
