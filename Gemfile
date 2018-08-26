@@ -15,27 +15,27 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "devise"
 gem "jquery-rails"
-gem 'figaro'
+gem "figaro"
 gem "puma", "~> 3.0"
 gem "capistrano"
 gem "capistrano-bundler"
 gem "capistrano-rails"
 gem "capistrano-resque", require: false
 gem "capistrano-rvm"
-gem 'swiper-rails'
+gem "swiper-rails"
 gem "capistrano3-puma"
 gem "font-awesome-rails"
-gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
-gem 'flag-icons-rails'
-gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
-gem 'perfect-scrollbar-rails', '~> 0.6.10'
+gem "themify-icons-rails" , github: "scratch-soft/themify-icons-rails"
+gem "flag-icons-rails"
+gem "icheck-rails", "~> 1.0", ">= 1.0.2.1"
+gem "perfect-scrollbar-rails", "~> 0.6.10"
 gem "carrierwave", "~> 1.0"
-gem 'material_icons'
-gem 'spreadsheet'
+gem "material_icons"
+gem "spreadsheet"
 gem "roo-xls"
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-particles.js'
+source "https://rails-assets.org" do
+  gem "rails-assets-particles.js"
 end
 group :development, :test do
   gem "capybara", "~> 2.13"

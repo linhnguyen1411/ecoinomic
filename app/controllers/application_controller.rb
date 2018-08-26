@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def load_setting
     @admin_setting = Stage.first
-    @stage = @admin_setting.stage_type
+    @stage = @admin_setting&.stage_type
   end
 
   private
