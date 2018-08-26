@@ -17,8 +17,10 @@ class Admin::StagesController < Admin::AdminsController
     stage_types = Stage.enums_for_select("stage_types")
 
     render json: {
-      stage: stage.as_json,
-      stage_types: stage_types
+      stage: stage.as_json(methods: [:time_start_date_1, :time_end_date_1,
+        :time_start_date_2, :time_end_date_2], only: [:stage_type, :progess, :coin_1, :coin_2]),
+      stage_types: stage_types,
+      attr_date: Stage::ATTR_DATE
     }
   end
 

@@ -10,12 +10,16 @@ function StagesController($location, $scope, stageService) {
   vm.init = function() {
     stageService.loadData().then(function mySuccess(response){
       angular.extend(vm, response.data);
+      vm.attr_date.forEach(function(key) {
+        vm.stage[key] = vm.stage["time_" + key];
+      });
       setTimePicker();
     });
   }
 
   function setTimePicker() {
     setTimeout(function(){$('.input-datepicker').datetimepicker({
+      format: "DD/MM/YYYY hh:mm A"
     });}, 500);
   }
 
