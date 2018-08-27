@@ -2,26 +2,29 @@ class Landing::LandingsController < Landing::BaseController
   def index
     setting = Stage.first
     time_now = Time.zone.now.to_datetime + 7.hour
-    if (setting.start_date_1.to_datetime <= time_now && setting.end_date_1.to_datetime > time_now) || (setting.start_date_1 > time_now)
-      if setting.start_date_1 > time_now
-        @time_count = ((setting.start_date_1.to_datetime - time_now)*24*60*60).to_i
-        @mess = "Presale will start in"
+    if setting.buy_coin?
+      if (setting.start_date_1.to_datetime <= time_now && setting.end_date_1.to_datetime > time_now) || (setting.start_date_1 > time_now)
+        if setting.start_date_1 > time_now
+          @time_count = ((setting.start_date_1.to_datetime - time_now)*24*60*60).to_i
+          @mess = "Presale will start in"
+        else
+          @time_count = ((setting.end_date_1.to_datetime - time_now)*24*60*60).to_i
+          @mess = "Presale will end in"
+        end
+        @coin = setting.coin_1
       else
-        @time_count = ((setting.end_date_1.to_datetime - time_now)*24*60*60).to_i
-        @mess = "Presale will end in"
+        if setting.start_date_2 > time_now
+          @time_count = ((setting.start_date_2.to_datetime - time_now)*24*60*60).to_i
+          @mess = "Crownsale will start in"
+        else
+          @time_count = ((setting.end_date_2.to_datetime - time_now)*24*60*60).to_i
+          @mess = "Crownsale will end in"
+        end
+        @coin = setting.coin_2
       end
-      @coin = setting.coin_1
-    else
-      if setting.start_date_2 > time_now
-        @time_count = ((setting.start_date_2.to_datetime - time_now)*24*60*60).to_i
-        @mess = "Crownsale will start in"
-      else
-        @time_count = ((setting.end_date_2.to_datetime - time_now)*24*60*60).to_i
-        @mess = "Crownsale will end in"
-      end
-      @coin = setting.coin_2
+      @progress = setting.progess
     end
-    @progress = setting.progess
+
     return unless request.xhr?
     render json: {
       html: render_to_string(partial: "buy_coin")

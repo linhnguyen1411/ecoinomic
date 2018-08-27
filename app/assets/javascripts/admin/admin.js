@@ -24,4 +24,8 @@ $(document).ready(function(){
      $('.stage-setting').addClass('disabled');
     }
   });
+
+  $('#position-select').on('change', function(){
+    $('.image-choise-note').html($("option:selected", this).data('note'));
+  })
 });
