@@ -33,6 +33,7 @@ gem "carrierwave", "~> 1.0"
 gem "material_icons"
 gem "spreadsheet"
 gem "roo-xls"
+gem "config"
 
 source "https://rails-assets.org" do
   gem "rails-assets-particles.js"

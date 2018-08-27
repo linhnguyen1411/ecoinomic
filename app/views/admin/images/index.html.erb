@@ -10,62 +10,43 @@
     <div class="block-title">
       <h2><strong>Custome Image</strong></h2>
     </div>
-    <form action="page_forms_general.html" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered change-image" onsubmit="return false;">
+    <%= form_for [:admin, Image.new], html: {class: "form-horizontal form-bordered change-image"}, :remote => true do |f| %>
+      <input type="hidden"
+        value="<%= form_authenticity_token() %>"
+        name="authenticity_token"/>
       <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">About Image</label>
-        <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 510x411 pixels</span>
+        <label class="col-md-3 control-label" for="example-select">Select</label>
+        <div class="col-md-3">
+          <select id="position-select" name="image[image_type]" class="form-control" size="1">
+            <% Image.image_types.each do |key, value| %>
+              <option value="<%= key %>" data-note="<%= t "landing_image.#{key}" %>"><%= t "image_settings.#{key}" %></option>
+            <% end %>
+          </select>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">Solution Image Top</label>
+        <label class="col-md-3 control-label" for="example-file-input">Please Choise Image</label>
         <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 384x372 pixels</span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">Solution Image Bot</label>
-        <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 384x401 pixels</span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">Document Image</label>
-        <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 370x483 pixels</span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">App Image</label>
-        <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 540x482 pixels</span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">About Coin Image</label>
-        <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 284x372 pixels</span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-3 control-label" for="example-file-input">Token Stats Image</label>
-        <div class="col-md-9">
-          <input type="file" id="example-file-input" name="example-file-input">
-          <span class="help-block">* Please choise image with 490x484 pixels</span>
+          <%= f.file_field :image %>
+          <span class="help-block image-choise-note">* Please choise image with 510x411 pixels</span>
         </div>
       </div>
       <div class="form-group form-actions">
-          <div class="col-md-9 col-md-offset-3">
-              <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Submit</button>
-              <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-repeat"></i> Reset</button>
-          </div>
+        <div class="col-md-9 col-md-offset-3">
+          <%= f.submit "Submit", class: "btn btn-sm btn-primary image-submit" do %>
+            <i class="fa fa-angle-right"></i>
+          <% end %>
+        </div>
       </div>
-    </form>
-</div>
+    <% end %>
+  </div>
+
+  <div class="block">
+    <div class="row">
+      <div class="col-md-4 img-about">
+      </div>
+      <div class="col-md-4 img-solution-top"></div>
+      <div class="col-md-4 img-solution-top"></div>
+    </div>
+  </div>
 </div>
