@@ -20,7 +20,6 @@ $(document).ready(function(){
       $('.stage-setting').removeClass('disabled');
     }
     else {
-      alert('asdas');
      $('.stage-setting').addClass('disabled');
     }
   });
@@ -28,4 +27,18 @@ $(document).ready(function(){
   $('#position-select').on('change', function(){
     $('.image-choise-note').html($("option:selected", this).data('note'));
   })
+
+  $('#update-image').on('submit', function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'images',
+      method: "POST",
+      dataType: "script",
+      data: new FormData(this),
+      processData: false,
+      contentType: false,
+      success: function(response) {
+      }
+    });
+  });
 });

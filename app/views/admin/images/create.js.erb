@@ -1,5 +1,6 @@
 <% if @status %>
   toastr['success']('thanh cong');
+  $('.oh_<%= @image.image_type %>').html('<%= image_tag @image.image_url, class: "img_about" %>')
 <% else %>
   toastr['error']('that bai');
 <% end %>
