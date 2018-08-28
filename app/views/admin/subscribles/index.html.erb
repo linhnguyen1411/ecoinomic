@@ -1,0 +1,32 @@
+<div id="page-content" ng-controller="StagesController as vm" ng-init="vm.init()">
+  <div class="header-section">
+    <div class="row">
+      <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+        <h1><strong>List of Subscrible</strong><br><small>You Look Awesome!</small></h1>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-title">
+      <h2>Your page have <strong><%= @subscribles.size %></strong> Subscrible</h2>
+    </div>
+    <div class="table-responsive">
+      <table id="general-table" class="table table-vcenter table-hover">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Subscrible Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @subscribles.each do |sub| %>
+            <tr>
+              <td><%= sub.email %></td>
+              <td><%= sub.created_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

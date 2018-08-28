@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SubribleTest < ActiveSupport::TestCase
+class SubscribeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

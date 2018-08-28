@@ -5,7 +5,7 @@ class Stage < ApplicationRecord
   #
   ATTR_DATE = ["start_date_1", "end_date_1", "start_date_2", "end_date_2"];
 
-  enum stage_type: {subcrible: 1, register: 2, buy_coin: 3, ended: 4}
+  enum stage_type: {subscrible: 1, register: 2, buy_coin: 3, ended: 4}
 
   validates :stage_type, presence: true
   # validates  :start_subcrible, :end_subcrible, presence: true, if: :is_subcrible
@@ -40,8 +40,8 @@ class Stage < ApplicationRecord
     self.register?
   end
 
-  def is_subcrible
-    self.subcrible?
+  def is_subscrible
+    self.subscrible?
   end
 
   def is_ended
