@@ -44,12 +44,11 @@
     </div>
     <div class="row">
       <% @images.each do |image| %>
-        <div class="col-md-4" align="center">
-          <span><strong><%= t "image_settings.#{image.image_type}" %> page</strong></span>
+        <div class="row" style="padding: 20px;" align="center">
+          <div><strong><%= t "image_settings.#{image.image_type}" %> page</strong></div>
           <span class="oh_<%= image.image_type %>">
-            <%= image_tag image.image_url, class: "img_about" %>
+            <%= image_tag image.image_url, class: "ohh_#{image.image_type}" %>
           </span>
-          <span><i>abc</i></span>
         </div>
       <% end %>
     </div>

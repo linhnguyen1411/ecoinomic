@@ -1,5 +1,6 @@
 class Landing::LandingsController < Landing::BaseController
   def index
+    @images = Image.all
     setting = Stage.first
     time_now = Time.zone.now.to_datetime + 7.hour
     if setting.buy_coin?
