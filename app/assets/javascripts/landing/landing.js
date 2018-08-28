@@ -6,12 +6,12 @@ $(document).ready(function(){
     "newestOnTop": true
   }
 
-  $("#js-subrible-email").on("click", function() {
-    var email = $("#email-subcrible").val();
+  $("#js-subscribe-email").on("click", function() {
+    var email = $("#email-subscrible").val();
     if (email != ""){
       var csrfToken = $("#authenticity_token").val();
       $.ajax({
-        url: "landings/subcrible",
+        url: "landings/subscrible",
         method: "POST",
         dataType: "json",
         data: {email: email},
@@ -20,7 +20,7 @@ $(document).ready(function(){
         },
         success: function(response) {
           if (!response.status_sub)
-            toastr["warning"]("Subcrible ended please reload page");
+            toastr["warning"]("Subscrible ended please reload page");
           else if (response.status)
             toastr["success"]("You has subscribed");
           else {

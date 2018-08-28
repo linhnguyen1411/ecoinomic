@@ -32,15 +32,15 @@ class Landing::LandingsController < Landing::BaseController
     }
   end
 
-  def subcrible
-    status_sub =  Stage.first.subcrible?
+  def subscrible
+    status_sub =  Stage.first.subscrible?
     if status_sub
-      subcrible = Subrible.new email: params[:email]
-      status = subcrible.save
+      subscrible = Subscrible.new email: params[:email]
+      status = subscrible.save
     end
     render json: {
       status: status,
-      errors: subcrible&.errors&.full_messages,
+      errors: subscrible&.errors&.full_messages,
       status_sub: status_sub
     }
   end

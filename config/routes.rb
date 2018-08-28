@@ -1,15 +1,4 @@
 Rails.application.routes.draw do
-  namespace :user do
-    get 'buy_tokens/index'
-  end
-
-  namespace :admin do
-    get 'stages/index'
-  end
-
-  namespace :user do
-    get 'referrals/index'
-  end
 
   devise_for :user, controllers: {registrations: "user/registrations",
     sessions: "user/sessions", passwords: "user/passwords"}
@@ -32,7 +21,7 @@ Rails.application.routes.draw do
   scope module: "landing" do
     resource :landings do
       collection do
-        post "subcrible"
+        post "subscrible"
       end
     end
   end
@@ -53,6 +42,7 @@ Rails.application.routes.draw do
     resources :admins
     get "/dashboard", to: "dashboards#index"
     get "/stages", to: "stages#index"
+    get "/subscribles", to: "subscribles#index"
     resource :stages do
       collection do
         post "create"
