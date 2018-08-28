@@ -239,7 +239,7 @@
               </div>
               <div class="col-md-12 col-lg-6 animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s">
                 <div class="position-relative what-is-crypto-img float-xl-right">
-                  <%= image_tag "landing/what-is-crypto.png", class: "img-fluid" %>
+                  <%= image_tag @images.img_about.first.image_url, class: "img-fluid" %>
                   <div class="play-video text-center">
                     <a href="#" class="play rounded-circle btn-gradient-purple btn-glow video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/UXAJu3zS4bU" data-target="#ico-modal"><i class="ti-control-play"></i></a>
                     <span class="mt-2 d-none d-md-block">How it works</span>
@@ -273,16 +273,16 @@
                 <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">Even interoperating new technologies with old centralised resources can prove useful in making the paradigm shift from Web 2 to Web 3 happen. Now we own our data, we can prove that we own what we have and have created it on different platforms, but how do we put it together into a whole new cohesive framework.</p>
               </div>
               <div class="col-md-12 col-lg-6 text-center">
-                <%= image_tag "landing/problems-graphic.png", class: "problems-img animated", data: {animation: "fadeInUpShorter",
-                  aimation_delay: "0.5s"} %>
+                <%= image_tag @images.img_solution_top.first.image_url, class: "problems-img animated",
+                  data: {animation: "fadeInUpShorter", aimation_delay: "0.5s"} %>
               </div>
             </div>
           </div>
           <div class="solutions mt-5">
             <div class="row">
               <div class="col-md-12 col-lg-6 text-center">
-                <%= image_tag "landing/solutions-graphic.png", class: "solutions-img animated", data: {animation: "fadeInUpShorter",
-                  aimation_delay: "0.5s"} %>
+                <%= image_tag @images.img_solution_bot.first.image_url, class: "solutions-img animated",
+                  data: {animation: "fadeInUpShorter", aimation_delay: "0.5s"} %>
               </div>
               <div class="col-md-12 col-lg-6 move-first">
                 <div class="heading mb-4">
@@ -309,7 +309,8 @@
           <div class="row">
             <div class="col-lg-5 col-md-12">
               <div class="whitepaper-img">
-                <%= image_tag "landing/whitepaper.png", class: "img-fluid animated", data: { animation: "fadeInUpShorter", animation_delay: "0.6s"} %>
+                <%= image_tag @images.img_document.first.image_url, class: "img-fluid animated",
+                  data: { animation: "fadeInUpShorter", animation_delay: "0.6s"} %>
               </div>
             </div>
             <div class="col-lg-7 col-md-12">
@@ -389,10 +390,8 @@
               </div>
               <div class="col-lg-6 col-md-12 move-first">
                 <div class="mobile-app-imgs">
-                  <%= image_tag "landing/mobile-app-1.png", class: "mobile-app-img-1 animated", data: {animation: "fadeInUpShorter", animation_delay: "0.9s"} %>
-                  <%= image_tag "landing/mobile-app-2.png", class: "mobile-app-img-2 animated", data: {animation: "zoomIn", animation_delay: "1.4s"} %>
-                  <%= image_tag "landing/mobile-app-3.png", class: "mobile-app-img-3 animated", data: {animation: "zoomIn", animation_delay: "1.9s"} %>
-                  <%= image_tag "landing/mobile-app-4.png", class: "mobile-app-img-4 animated", data: {animation: "zoomIn", animation_delay: "2.4s"} %>
+                  <%= image_tag @images.img_app.first.image_url, class: "mobile-app-img-1 animated",
+                    data: {animation: "fadeInUpShorter", animation_delay: "0.9s"} %>
                 </div>
               </div>
             </div>
@@ -506,7 +505,7 @@
           <div class="row">
             <div class="col-lg-5 col-md-12 animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">
               <div class="coin-img">
-                <%= image_tag "landing/our-coin.png", class: "img-fluid" %>
+                <%= image_tag @images.img_about_coin.first.image_url, class: "img-fluid" %>
               </div>
             </div>
             <div class="col-lg-7 col-md-12">
@@ -545,7 +544,7 @@
             </div>
             <div class="col-md-12 col-lg-6 move-first animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s">
               <div class="token-img">
-                <%= image_tag "landing/chart.png", class: "img-fluid" %>
+                <%= image_tag @images.img_token_stats.first.image_url, class: "img-fluid" %>
               </div>
             </div>
           </div>
